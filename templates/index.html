@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>SearchJSON</title>
+</head>
+<body>
+    <div class="container">
+        <h1>SearchJSON</h1>
+        <hr class="title-underline">
+        <h3>JSON formatting and search</h3>
+        <h3>Open source, zero data retention</h3>
+        <div class="search-input-wrapper">
+            <div id="search-container">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button" aria-label="Search">
+                    <i class="fas fa-search fa-inverse"></i>
+                </button>
+                <button id="clear-json-button" title="Clear JSON input area">
+                    <i class="fas fa-trash-alt fa-inverse"></i>
+                </button>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="left-column">
+                <textarea id="json-input" placeholder="Input JSON here..."></textarea>
+            </div>
+            <div class="right-column">
+                <h2>Search Paths</h2>
+                <div id="search-results"></div>
+            </div>
+        </div>
+        <div id="format-status"></div>
+        <div class="theme-switch-wrapper">
+            <a href="https://github.com/yourusername/your-repo" target="_blank" class="github-link" title="Open source, of course">
+                <i class="fab fa-github"></i>
+            </a>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
